@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47a15d9d-c79e-46a9-bbbf-df38ac55657d" name="Default Changelist" comment="First Commit checklist: 1) Added missing files in pom.xml&#10;2) Prepared skeletal code for endpoints in &quot;UserController&quot; class&#10;3) Generated JPA entities for 'users' and 'user_auth' table">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javassist_3_24_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javassist_3_24_0_GA1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javassist_3_24_0_GA2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javassist_3_24_0_GA3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity/UserAuthEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="47a15d9d-c79e-46a9-bbbf-df38ac55657d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/exception/RestExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/SignupBusinessService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quora-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quora-api/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quora-db/src/main/resources/config/localhost.properties" beforeDir="false" afterPath="$PROJECT_DIR$/quora-db/src/main/resources/config/localhost.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -407,7 +397,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="4" />
+          <entry key="java" value="9" />
           <entry key="properties" value="1" />
           <entry key="xml" value="3" />
           <entry key="yaml" value="1" />
@@ -415,7 +405,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="4" />
+          <entry key="JAVA" value="9" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="3" />
           <entry key="YAML" value="1" />
@@ -423,7 +413,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="124" />
+          <entry key="java" value="133" />
           <entry key="properties" value="11" />
           <entry key="txt" value="204" />
           <entry key="xml" value="4" />
@@ -432,22 +422,45 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="124" />
+          <entry key="JAVA" value="133" />
           <entry key="PLAIN_TEXT" value="204" />
           <entry key="Properties" value="11" />
           <entry key="XML" value="4" />
           <entry key="YAML" value="11" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.merge" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity/UserAuthEntity.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="69" selection-start-column="69" selection-end-column="69" />
+            <state relative-caret-position="2000">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/SignupBusinessService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/exception/RestExceptionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -483,8 +496,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/CommonController.java" />
-        <option value="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/exception/RestExceptionHandler.java" />
         <option value="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/CommonBusinessService.java" />
         <option value="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/PasswordCryptographyProvider.java" />
         <option value="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/common/GenericErrorCode.java" />
@@ -499,7 +510,6 @@
         <option value="$PROJECT_DIR$/quora-api/src/main/resources/endpoints/question.json" />
         <option value="$PROJECT_DIR$/quora-api/src/main/resources/endpoints/common.json" />
         <option value="$PROJECT_DIR$/quora-api/src/main/resources/endpoints/admin.json" />
-        <option value="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/UserBusinessService.java" />
         <option value="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/QuestionController.java" />
         <option value="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/AnswerController.java" />
@@ -531,9 +541,12 @@
         <option value="$PROJECT_DIR$/quora-api/src/main/resources/application.yaml" />
         <option value="$PROJECT_DIR$/quora-db/src/main/resources/config/localhost.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java" />
         <option value="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity/UserEntity.java" />
         <option value="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity/UserAuthEntity.java" />
+        <option value="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/exception/RestExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/SignupBusinessService.java" />
       </list>
     </option>
   </component>
@@ -571,6 +584,51 @@
             <path>
               <item name="quora" type="b2602c69:ProjectViewProjectNode" />
               <item name="Trello_quora" type="462c0819:PsiDirectoryNode" />
+              <item name="quora-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Trello_quora" type="462c0819:PsiDirectoryNode" />
+              <item name="quora-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Trello_quora" type="462c0819:PsiDirectoryNode" />
+              <item name="quora-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Trello_quora" type="462c0819:PsiDirectoryNode" />
+              <item name="quora-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Trello_quora" type="462c0819:PsiDirectoryNode" />
+              <item name="quora-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Trello_quora" type="462c0819:PsiDirectoryNode" />
+              <item name="quora-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Trello_quora" type="462c0819:PsiDirectoryNode" />
               <item name="quora-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -603,6 +661,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="quora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Trello_quora" type="462c0819:PsiDirectoryNode" />
+              <item name="quora-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -619,7 +687,7 @@
     <property name="SearchEverywhereHistoryKey" value="yaml&#9;FILE&#9;file://E:/Trello_quora/quora_solution/Trello_quora/quora-api/src/main/resources/application.yaml&#10;quora&#9;FILE&#9;file://E:/Trello_quora/quora_solution/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;quoraapi&#9;FILE&#9;file://E:/Trello_quora/26thsepquora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;.yaml&#9;FILE&#9;file://E:/Trello_quora/26thsepquora/Trello_quora/quora-api/src/main/resources/application.yaml&#10;userco&#9;FILE&#9;file://E:/Trello_quora/26thsepquora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java&#10;userau&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserAuthEntity.java&#10;userentity&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserEntity.java&#10;commond&#9;PSI&#9;JAVA://com.upgrad.quora.service.dao.CommonDao&#10;userdao&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/UserDao.java&#10;userc&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java&#10;quora-api&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-api/pom.xml&#10;answere&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/AnswerEntity.java&#10;.json&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-api/src/main/resources/endpoints/quora.json&#10;usere&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserEntity.java&#10;userd&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/UserDao.java&#10;quoraap&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;answer&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/AnswerControllerTest.java&#10;question&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/QuestionControllerTest.java&#10;common&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/CommonControllerTest.java&#10;admincon&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/AdminControllerTest.java&#10;appli&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;answercontro&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/controller/AnswerController.java&#10;adminte&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/AdminControllerTest.java&#10;admin&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/AdminControllerTest.java&#10;userbu&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/UserBusinessService.java&#10;.sql&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-db/src/main/resources/sql/quora.sql&#10;admins&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/AdminBusinessService.java&#10;userauth&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserAuthEntity.java&#10;questione&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/QuestionEntity.java&#10;answeren&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/AnswerEntity.java&#10;adminc&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/controller/AdminController.java&#10;app&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;answerda&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/AnswerDao.java&#10;commonbusines&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/CommonBusinessService.java&#10;questionda&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/QuestionDao.java&#10;admindao&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/AdminDao.java&#10;application&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;applicat&#9;PSI&#9;JAVA://com.upgrad.quora.api.QuoraApiApplication&#10;quora.sql&#9;FILE&#9;file://E:/Trello_quora/quora-db/src/main/resources/sql/quora.sql&#10;answerdao&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/AnswerDao.java&#10;answerServ&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/AnswerBusinessService.java&#10;questionser&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/QuestionBusinessService.java&#10;commondao&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/CommonDao.java&#10;commonbusiness&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/CommonBusinessService.java&#10;adminservice&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/AdminBusinessService.java&#10;userbusinessser&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/UserBusinessService.java&#10;userservice&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/UserBusinessService.java&#10;entity&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserEntity.java&#10;adminser&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/AdminBusinessService.java&#10;usera&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserAuthEntity.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557248622884" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557251474801" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/javassist-3.24.0-GA.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -760,8 +828,16 @@
       <workItem from="1538634479950" duration="3217000" />
       <workItem from="1538642827225" duration="1059000" />
       <workItem from="1538723860955" duration="5425000" />
-      <workItem from="1557219099993" duration="4706000" />
+      <workItem from="1557219099993" duration="6460000" />
     </task>
+    <task id="LOCAL-00001" summary="First Commit checklist: 1) Added missing files in pom.xml&#10;2) Prepared skeletal code for endpoints in &quot;UserController&quot; class&#10;3) Generated JPA entities for 'users' and 'user_auth' table">
+      <created>1557249603390</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557249603390</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -797,32 +873,32 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274958000" />
+    <option name="totallyTimeSpent" value="276712000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.48764044" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2985961" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="0" visible="true" weight="0.5887962" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.5887962" />
       <window_info anchor="bottom" id="Structure" order="1" weight="0.07855974" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" />
       <window_info anchor="bottom" id="Spring" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32889965" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.22094926" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.2205006" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.45335516" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.579261" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.57806915" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.38140643" />
       <window_info anchor="right" id="Bean Validation" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -873,6 +949,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -898,13 +984,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/quora-api/src/main/resources/endpoints/common.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="135" column="23" selection-start-line="135" selection-start-column="23" selection-end-line="135" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quora-api/src/main/resources/endpoints/question.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -928,7 +1007,6 @@
     <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/AnswerDao.java" />
     <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/CommonDao.java" />
     <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/QuestionDao.java" />
-    <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/UserDao.java" />
     <entry file="file://$PROJECT_DIR$/quora-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -936,7 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/exception/RestExceptionHandler.java" />
     <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity/QuestionEntity.java" />
     <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity/AnswerEntity.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.1.RELEASE/spring-boot-2.0.1.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
@@ -1149,16 +1226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -1175,8 +1242,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity/UserAuthEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="69" selection-start-column="69" selection-end-column="69" />
+        <state relative-caret-position="96">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2000">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/SignupBusinessService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/exception/RestExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
