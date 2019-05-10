@@ -25,6 +25,7 @@ public class AuthenticationBusinessService {
     @Transactional(propagation = Propagation.REQUIRED)
     public UserAuthEntity authenticate(final String email, final String password) throws AuthenticationFailedException{
 
+        //getting user by its entered email
         UserEntity userEntity = userDao.getUserByEmail(email);
 
         if (userEntity == null){

@@ -1,6 +1,7 @@
 package com.upgrad.quora.api.controller;/* Create by Mansi Elhance */
 
 import com.upgrad.quora.api.model.SigninResponse;
+import com.upgrad.quora.api.model.SignoutResponse;
 import com.upgrad.quora.api.model.SignupUserRequest;
 import com.upgrad.quora.api.model.SignupUserResponse;
 import com.upgrad.quora.service.business.AuthenticationBusinessService;
@@ -9,6 +10,7 @@ import com.upgrad.quora.service.business.SignupBusinessService;
 import com.upgrad.quora.service.entity.UserAuthEntity;
 import com.upgrad.quora.service.entity.UserEntity;
 import com.upgrad.quora.service.exception.AuthenticationFailedException;
+import com.upgrad.quora.service.exception.SignOutRestrictedException;
 import com.upgrad.quora.service.exception.SignUpRestrictedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -66,7 +68,6 @@ public class UserController {
         String decodedText = new String(decode);
         String[] decodedArray = decodedText.split(":");
 
-        //AuthenticationService authenticationService=new AuthenticationService();
         UserAuthEntity userAuthEntity = authenticationBusinessService.authenticate(decodedArray[0], decodedArray[1]);
 
         SigninResponse signinResponse=new SigninResponse();
@@ -79,16 +80,16 @@ public class UserController {
     }
 
     //signout endpoint
-//    @RequestMapping(method = RequestMethod.POST, path = "/user/signout", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-//    public ResponseEntity<SignoutResponse> signout(@RequestHeader("Access_Token") final String accessToken) throws SignOutRestrictedException {
-//
-//        String[] bearerToken=accessToken.split("Bearer");
-//        UserEntity signedoutUserEntity=signOutBusinessService.signout(bearerToken[0]);
-//        SignoutResponse signoutResponse= new SignoutResponse();
-//        signoutResponse.setMessage("SIGNED OUT SUCCESSFULLY");
-//        signoutResponse.setId(signedoutUserEntity.getUuid());
-//        return new ResponseEntity<SignoutResponse>(signoutResponse,HttpStatus.OK);
-//    }
+    @RequestMapping(method = RequestMethod.POST, path = "/user/signout", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<SignoutResponse> signout(@RequestHeader("Access_Token") final String accessToken) throws SignOutRestrictedException {
+
+        String[] bearerToken=accessToken.split("Bearer");
+        UserEntity signedoutUserEntity=signOutBusinessService.signout(bearerToken[0]);
+        SignoutResponse signoutResponse= new SignoutResponse();
+        signoutResponse.setMessage("SIGNED OUT SUCCESSFULLY");
+        signoutResponse.setId(signedoutUserEntity.getUuid());
+        return new ResponseEntity<SignoutResponse>(signoutResponse,HttpStatus.OK);
+    }
 
 }
 

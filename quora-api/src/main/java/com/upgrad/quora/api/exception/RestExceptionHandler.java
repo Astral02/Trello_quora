@@ -13,6 +13,7 @@ import org.springframework.web.context.request.WebRequest;
 @ControllerAdvice
 public class RestExceptionHandler {
 
+    //Handler for SignUpRestrictedException
     @ExceptionHandler(SignUpRestrictedException.class)
     public ResponseEntity<ErrorResponse> signUpRestrictedException(SignUpRestrictedException exe, WebRequest request){
         return new ResponseEntity<ErrorResponse>(
@@ -20,6 +21,7 @@ public class RestExceptionHandler {
         );
     }
 
+    //Handler for AuthenticationFailedException
     @ExceptionHandler(AuthenticationFailedException.class)
     public ResponseEntity<ErrorResponse> authenticationFailedException(AuthenticationFailedException exe, WebRequest request){
         return new ResponseEntity<ErrorResponse>(
@@ -27,6 +29,7 @@ public class RestExceptionHandler {
         );
     }
 
+    //Handler for SignOutRestrictedException
     @ExceptionHandler(SignOutRestrictedException.class)
     public ResponseEntity<ErrorResponse> signOutRestrictedException(SignOutRestrictedException exe, WebRequest request){
         return new ResponseEntity<ErrorResponse>(
