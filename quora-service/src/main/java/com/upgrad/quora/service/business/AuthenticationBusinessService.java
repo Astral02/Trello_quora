@@ -23,10 +23,10 @@ public class AuthenticationBusinessService {
     private PasswordCryptographyProvider cryptographyProvider;
 
     @Transactional(propagation = Propagation.REQUIRED)
-    public UserAuthEntity authenticate(final String email, final String password) throws AuthenticationFailedException{
+    public UserAuthEntity authenticate(final String username, final String password) throws AuthenticationFailedException{
 
         //getting user by its entered email
-        UserEntity userEntity = userDao.getUserByEmail(email);
+        UserEntity userEntity = userDao.getUserByUsername(username);
 
         if (userEntity == null){
             throw new AuthenticationFailedException("ATH-001","This username does not exist.");

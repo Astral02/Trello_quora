@@ -14,7 +14,14 @@ public class UserCommonBusinessService  {
     @Autowired
     private UserDao userDao;
 
-
+    /**
+     * Get the users details
+     * @param userUuid
+     * @param authorizationToken
+     * @return
+     * @throws AuthorizationFailedException
+     * @throws UserNotFoundException
+     */
     public UserEntity getUser(final String userUuid, final String authorizationToken) throws AuthorizationFailedException, UserNotFoundException {
         UserAuthEntity userAuthEntity=userDao.getUserAuthToken(authorizationToken);
         if(userAuthEntity == null){
@@ -27,5 +34,26 @@ public class UserCommonBusinessService  {
             return userDao.getUserByUuid(userAuthEntity.getUuid());
         }
 
+    }
+
+    /**
+     * Gets the user by access token
+     * @param authorizationToken
+     * @return
+     * @throws AuthorizationFailedException
+     */
+    public UserAuthEntity getUserByAccessToken(String authorizationToken) throws AuthorizationFailedException {
+        UserAuthEntity userAuthTokenEntity = userDao.getUserAuthToken(authorizationToken);
+        if (userAuthTokenEntity == null) {
+            throw new AuthorizationFailedException("ATHR-001", "User has not signed in");
+        }
+        if (userAuthTokenEntity.getLogout_at() != null) {
+            throw new AuthorizationFailedException("ATHR-002", "User is signed out.Sign in first to delete a question");
+        }
+        //UserEntity userEntity =  userDao.getUser(userAuthTokenEntity.getUuid());
+        //if (userEntity.getRole().equalsIgnoreCase("nonadmin")) {
+        //    throw new AuthorizationFailedException("ATHR-003", "Only the question owner or admin can delete the question");
+        //}
+        return userAuthTokenEntity;
     }
 }
