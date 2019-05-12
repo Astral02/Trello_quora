@@ -1,12 +1,12 @@
-package com.upgrad.quora.api.exception;/* Created by Mansi Elhance */
+package com.upgrad.quora.api.exception;/* Create by Mansi Elhance */
 
-        import com.upgrad.quora.api.model.ErrorResponse;
-        import com.upgrad.quora.service.exception.*;
-        import org.springframework.http.HttpStatus;
-        import org.springframework.http.ResponseEntity;
-        import org.springframework.web.bind.annotation.ControllerAdvice;
-        import org.springframework.web.bind.annotation.ExceptionHandler;
-        import org.springframework.web.context.request.WebRequest;
+import com.upgrad.quora.api.model.ErrorResponse;
+import com.upgrad.quora.service.exception.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
 
 @ControllerAdvice
 public class RestExceptionHandler {
@@ -15,7 +15,7 @@ public class RestExceptionHandler {
     @ExceptionHandler(SignUpRestrictedException.class)
     public ResponseEntity<ErrorResponse> signUpRestrictedException(SignUpRestrictedException exe, WebRequest request){
         return new ResponseEntity<ErrorResponse>(
-                new com.upgrad.quora.api.model.ErrorResponse().code(exe.getCode()).message(exe.getErrorMessage()), HttpStatus.FORBIDDEN
+                new com.upgrad.quora.api.model.ErrorResponse().code(exe.getCode()).message(exe.getErrorMessage()), HttpStatus.CONFLICT
         );
     }
 
@@ -35,21 +35,17 @@ public class RestExceptionHandler {
         );
     }
 
-    // --- For AdminController ---
-
-    //Handler for AuthorizationFailedException
     @ExceptionHandler(AuthorizationFailedException.class)
-    public ResponseEntity<ErrorResponse> authorizationFailedException(AuthorizationFailedException exe, WebRequest request){
+    public ResponseEntity<ErrorResponse> authorizationFailedException(AuthorizationFailedException exe, WebRequest request) {
         return new ResponseEntity<ErrorResponse>(
-                new com.upgrad.quora.api.model.ErrorResponse().code(exe.getCode()).message(exe.getErrorMessage()),HttpStatus.UNAUTHORIZED
+                new ErrorResponse().code(exe.getCode()).message(exe.getErrorMessage()), HttpStatus.UNAUTHORIZED
         );
     }
 
-    //Handler for UserNotFoundException
     @ExceptionHandler(UserNotFoundException.class)
-    public ResponseEntity<ErrorResponse> userNotFoundException(UserNotFoundException exe, WebRequest request){
+    public ResponseEntity<ErrorResponse> userNotFoundException(UserNotFoundException exe, WebRequest request) {
         return new ResponseEntity<ErrorResponse>(
-                new com.upgrad.quora.api.model.ErrorResponse().code(exe.getCode()).message(exe.getErrorMessage()),HttpStatus.UNAUTHORIZED
+                new ErrorResponse().code(exe.getCode()).message(exe.getErrorMessage()), HttpStatus.NOT_FOUND
         );
     }
 
