@@ -18,13 +18,11 @@ public class AdminController {
     private AdminBusinessService adminBusinessService;
 
     @RequestMapping(method = RequestMethod.DELETE , path = "/admin/user/{userId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<com.upgrad.quora.api.model.UserDeleteResponse> deleteUser(@PathVariable("userId") final String userid, @RequestHeader("access_token")
+    public ResponseEntity<com.upgrad.quora.api.model.UserDeleteResponse> deleteUser(@PathVariable("userId") final String userid, @RequestHeader("authorization")
     final String authorization) throws AuthenticationFailedException, AuthorizationFailedException, UserNotFoundException {
 
-        String [] bearerToken = authorization.split("Bearer ");
-        String uuid = adminBusinessService.deleteUser(userid ,bearerToken[1]);
+        String uuid = adminBusinessService.deleteUser(userid ,authorization);
         com.upgrad.quora.api.model.UserDeleteResponse userDeleteResponse=new com.upgrad.quora.api.model.UserDeleteResponse().id(uuid).status("USER SUCCESSFULLY DELETED");
-
         return new ResponseEntity<com.upgrad.quora.api.model.UserDeleteResponse>(userDeleteResponse, HttpStatus.OK);
     }
 }
