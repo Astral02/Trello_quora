@@ -81,15 +81,12 @@ public class UserController {
 
     //signout endpoint
     @RequestMapping(method = RequestMethod.POST, path = "/user/signout", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<SignoutResponse> signout(@RequestHeader("Access_Token") final String accessToken) throws SignOutRestrictedException {
-
-        String[] bearerToken=accessToken.split("Bearer");
-        UserEntity signedoutUserEntity=signOutBusinessService.signout(bearerToken[0]);
+    public ResponseEntity<SignoutResponse> signout(@RequestHeader("authorization") final String authorization) throws SignOutRestrictedException {
+        UserEntity signedoutUserEntity=signOutBusinessService.signout(authorization);
         SignoutResponse signoutResponse= new SignoutResponse();
         signoutResponse.setMessage("SIGNED OUT SUCCESSFULLY");
         signoutResponse.setId(signedoutUserEntity.getUuid());
         return new ResponseEntity<SignoutResponse>(signoutResponse,HttpStatus.OK);
     }
-
 }
 
