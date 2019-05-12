@@ -33,7 +33,6 @@ public class UserCommonBusinessService  {
         } else{
             return userDao.getUserByUuid(userAuthEntity.getUuid());
         }
-
     }
 
     /**
@@ -50,10 +49,6 @@ public class UserCommonBusinessService  {
         if (userAuthTokenEntity.getLogout_at() != null) {
             throw new AuthorizationFailedException("ATHR-002", "User is signed out.Sign in first to delete a question");
         }
-        //UserEntity userEntity =  userDao.getUser(userAuthTokenEntity.getUuid());
-        //if (userEntity.getRole().equalsIgnoreCase("nonadmin")) {
-        //    throw new AuthorizationFailedException("ATHR-003", "Only the question owner or admin can delete the question");
-        //}
         return userAuthTokenEntity;
     }
 }
