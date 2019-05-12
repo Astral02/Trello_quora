@@ -23,7 +23,6 @@ public class AdminController {
 
         String uuid = adminBusinessService.deleteUser(userid ,authorization);
         com.upgrad.quora.api.model.UserDeleteResponse userDeleteResponse=new com.upgrad.quora.api.model.UserDeleteResponse().id(uuid).status("USER SUCCESSFULLY DELETED");
-
         return new ResponseEntity<com.upgrad.quora.api.model.UserDeleteResponse>(userDeleteResponse, HttpStatus.OK);
     }
 }
